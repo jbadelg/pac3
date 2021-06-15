@@ -1,0 +1,28 @@
+/*variables para el sitio de marte*/
+:root {
+  --text-color: rgb(0,0,0);
+  --text-color-fondo-oscuro:rgb(255, 255, 255);
+  --contrast-color: rgb(189, 55, 0);
+  --bg-dark-color: rgb(0,0,0); 
+  --bg-light-color: rgba(0,0,0,0.1);
+  --px-mobile: 625px;
+}
+/*inicialización de html*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/*estilo general */
+body {
+  font-family: 'Open Sans';
+  font-weight: 400;
+  color: var(--text-color);
+  line-height: 1.5;
+  background-color:var(--bg-light-color);
+}
+@media (min-width: 625px) {
+  body {
+    background-color: blue;
+  }
+}

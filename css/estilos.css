@@ -3,9 +3,8 @@
   --text-color: rgb(0,0,0);
   --text-color-fondo-oscuro:rgb(255, 255, 255);
   --contrast-color: rgb(189, 55, 0);
-  --bg-dark-color: rgb(0,0,0); 
-  --bg-light-color: rgba(0,0,0,0.1);
-  --px-mobile: 625px;
+  --bg-dark-color: rgb(0,0,0);
+  --bg-light-color: rgba(0, 0, 0, 0.1);
 }
 /*inicialización de html*/
 * {
@@ -15,14 +14,458 @@
 }
 /*estilo general */
 body {
-  font-family: 'Open Sans';
+  font-family: 'Alegreya';
   font-weight: 400;
   color: var(--text-color);
   line-height: 1.5;
-  background-color:var(--bg-light-color);
+}
+
+a{
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--contrast-color);
+}
+/********************************************/
+/* menu de navegación de la parte superior */
+header { 
+  padding-top: 2vh;
+  text-align: center;
+}
+body.home header { 
+  padding-bottom: 8vh;
+}
+nav{
+    font-family: 'Open Sans';
+    padding-top: 2vh;
+}
+nav ul li {
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding-left: 0;
+  list-style-type: none;
+}
+nav li.active {
+   border-bottom: 3px solid;
+   width: max-content;
+   margin: 0 auto;
+}
+  /********** menu en una linea *******/
+@media (min-width: 625px) {
+  body main, body header{
+    width: 80%;
+    margin: 0 auto;
+  }
+  footer.pie form{
+    width: 35%;
+    margin: 0 auto;
+  }
+  main div.container{
+    padding-left: 0;
+    padding-right: 0;
+  }
+  main h1{
+    padding-top: 20px;
+  }
+  header{
+    text-align: left;
+  }
+  nav ul li,
+  nav ul li.active{
+    display: inline-block;
+    margin-right: 20px;
+  }
+  div.marca p:nth-child(2),
+  div.marca p:nth-child(3){
+    display:inline;
+  }
+}
+/*******************************************/
+/* titular */ 
+div.titular{
+  background-color: var(--bg-dark-color);
+  background-image: url(../img/bg-hero-mars.jpg);
+  background-size: 55%;
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  color: var(--text-color-fondo-oscuro);
+  height: 40vh;
+  width: 100%;
+  padding-left: 4vw;
+  line-height: 5rem;
+}
+div.titular h1{
+  font-size: 3.1rem;
+}
+div.titular p{
+  font-size: 2rem;  
+  font-style: italic;
 }
 @media (min-width: 625px) {
-  body {
-    background-color: blue;
+  div.titular{
+    background-size: contain;
+  }
+  div.titular > div p{
+    font-size: 3.5rem;
+    line-height: 6rem;
+  }
+  div.titular > div h1{
+    font-size: 4rem;
+  }
+  div.titular > div{
+    width: 80%;
+    margin: 0 auto;
+  }
+  div.titular {
+    height: 50vh;
+    padding-left: 0;
+  }
+}
+/*********************************************/
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+  width: 100%;
+}
+h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+div.titular div h1, .home div.container h1 {
+  padding-top: 5vh;
+}
+
+h3 {
+  font-size: 2.1rem;
+  font-weight: normal;
+}
+.img-fluid {
+  padding-top: 2vh;
+  max-width: 100%;
+}
+figure{
+  padding-top: 5vh;
+}
+figcaption{
+  font-size: 2.2rem;
+  font-weight: bold;
+  padding-bottom: 1vh;
+}
+figcaption a{
+  color: var(--contrast-color);
+}
+p{
+  font-size: 1.4rem;
+  line-height: 2rem;
+}
+abbr{
+  text-decoration: none;
+}
+@media (min-width: 625px) {
+  div.principal div.mision:nth-child(odd) {
+    background-color: var(--bg-light-color);
+  }
+  div.mision{
+    padding-bottom: 15vh;
+  }
+  div.principal{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+  }
+  div.mision figure .img-fluid{
+    padding-top: 0vh;
+  }
+  div.mision figure{
+    padding-top: 0vh;
+  }
+  div.mision figcaption,
+  div.mision p{
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+/**************************/
+/**  foooter pie de pagina ********/
+footer.pie {
+  font-family: 'Open Sans';
+  font-size: 0.8rem;
+  height: 80vh;
+  margin-top: 10vh;
+  padding-top: 7vh;
+  padding-bottom: 15px;    
+  background-color: var(--bg-dark-color);
+  color: #fff;
+  text-align: center;
+  align-content: center;
+}
+
+footer.pie div.container p a:hover {
+  color: var(--contrast-color);
+}
+footer.pie a{
+  color: var(--text-color-fondo-oscuro);
+  font-size: 1.1rem;
+}
+footer.pie form{
+  margin-top: 3vh;
+}
+footer.pie form ul{
+  font-size: 1.2rem;
+  list-style: none;
+  line-height: 2.7rem;
+}
+footer.pie div.container p span{
+  font-style: italic;
+}
+footer.pie div.container p{
+  padding-bottom: 3vh;
+  font-size: 1.6rem;
+}
+   /*** form ****/
+input[type="email"] {
+  width: 100%;
+  font-size: 1.2rem;
+  background-color: var(--bg-dark-color);
+  color: var(--text-color-fondo-oscuro);
+  border: none;
+  border-bottom:1px solid var(--text-color-fondo-oscuro);
+}
+::placeholder{
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+input[type="submit"] {
+  margin-top: 4vh;
+  font-size: 1.2rem;
+  width: auto;
+  margin-bottom: 15px;
+  padding: 10px 20px;
+  background-color: white;
+  border: none;
+  text-transform: uppercase;
+}
+input[type="submit"]:hover {
+  color: var(--text-color-fondo-oscuro);
+  background-color: var(--contrast-color);
+}
+   /****/
+footer.pie ul.links li {
+  display: inline-block;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+footer.pie ul.links{
+  margin-top: 4vh;
+  list-style-type: none;
+  margin-bottom: 4vh;
+}
+footer.pie ul.links li a:hover{
+  color: var(--contrast-color);
+}
+footer.pie div.marca p{
+  padding-bottom: 0;
+  font-size: 0.8rem;
+  line-height: 1rem;
+}
+p.copyr {
+  margin-bottom: 10px;
+}
+/**********************************************************/
+
+/***** pagina Mars 2020 *********/
+.video-fluid {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+}
+.video-fluid-item {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+.video-fluid::before {
+  display: block;
+  content: "";
+  padding-top: 56.25%;
+}
+article footer{
+  background-color: transparent;
+}
+article footer li a{
+  color: var(--contrast-color);
+}
+article footer ul{
+  text-align: left;
+}
+body.mars h1{
+  font-size: 3.8rem;
+}
+body.mars h3{
+  font-weight: bold; 
+  font-size: 2.8rem;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+}
+ul.cuadros{
+  padding: 25px;
+  list-style-type: square;
+  font-size: 1.4rem;
+}
+body.mars figcaption{
+  font-size: 1rem;
+  padding-top: 20px;
+  text-align: center;
+  font-weight: normal;
+}
+body.mars article footer{
+  font-family: 'Open Sans';
+}
+body.mars article footer p{
+  text-transform: uppercase;
+  padding-bottom: 2vh ;
+  padding-top: 4vh ;
+}
+body.mars article footer ul{
+  list-style-type: none;
+  font-size: 1.2rem;
+}
+body.mars article footer ul li a:hover{
+  background-color: var(--bg-dark-color);
+}
+li.selected{
+  color: var(--text-color);
+  font-weight: bold;
+}
+
+@media (min-width: 625px) {
+  article{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 5vh;
+  }
+  article div{
+    grid-column-start: 2;
+    text-align: justify;
+  }
+  article footer{
+    padding-top: 4vh;
+    grid-column-start: 1;
+    grid-row-start: 1;
+  }
+  article footer p,
+  article footer ul{
+    font-size: 1rem;
+  }
+}
+
+/****************************************/
+/***** pagina ciencia ficción  *********/
+div.obra{
+  background-color: var(--bg-light-color);
+  margin-top: 2vh;
+}
+div.obra h1, div.obra p{
+  padding-left: 2vh;
+  padding-right: 2vh;
+}
+p.autor{
+  font-weight: bold;
+  font-size: 1.7rem;
+}
+.autor::before {
+  content: "";
+  background-color: var(--contrast-color);
+  width: 30px;
+  height: 5px;
+  display: inline-block;
+  margin-right: 5px;
+}
+    /*solo el parrafo despues del h1*/
+div.obra h1 + p{
+  font-style: italic;
+  padding-bottom: 2vh;
+}
+div.obra h1{
+  line-height: 3rem;
+  padding-bottom: 3vh;
+}
+div.obra figure{
+  height: max-content;
+  padding-top: 0vh;
+  line-height: 0;
+}
+
+@media (min-width: 625px) {
+  body.obras .container .obra {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 20px;
+    font-size: smaller; 
+  } 
+  body.obras .container .obra figure img{
+    padding-top: 0;
+  }
+  body.obras .container .obra figure{
+    padding-top: 0;
+  }
+  body.obras .container div.obra {
+    background-color: transparent;
+  }
+  body.obras main > h1{
+    font-size: 4rem;
+  }
+  body.obras .container div.obra h1{
+    font-size: 2.5rem;
+    background-color: var(--bg-light-color);
+  }
+  body.obras .container div.obra div{
+    background-color: var(--bg-light-color);
+  }
+  div.container div.obra h1{
+    padding-top: 1vh;
+  }
+  body.obras .container .obra p.autor{
+    padding-bottom: 70px;
+  } 
+}
+
+/************************************/
+/***** pagina marte en el cine  *********/
+body.cine main h1{
+  font-size: 4rem;
+  padding-bottom: 2vh;
+}
+
+figure.peli {
+  padding-top: 0vh;
+  margin-bottom: 2vh;
+}
+figure.peli figcaption{
+  /* background-color:; */
+  font-size: 1.7rem;
+  font-weight: normal;
+  text-align: center;
+  padding-top: 2vh;
+  padding-bottom: 4vh;
+}
+
+/************************************/
+/*** pagina marte en el cine escritorio ******/
+@media (min-width: 625px) {
+  body.cine main .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
   }
 }

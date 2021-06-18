@@ -1,25 +1,98 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marte en el cine</title>
-    <meta name="description" content="web de Marte arte">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@400;800&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" href="css/estilos.css">
-</head>
-<body class="home">
-  <header>
-    <div>
-      <h1><a href="index.html"><img src="img/logo-black-es.png" alt="logo web marte"></a></h1>      
-      <nav>
-        <ul>
-          <li><a href="#explora">Exploración de Marte</a></li>
-          <li><a href="ciencia-ficcion.html">Ciencia ficción</a></li>
-          <li><a href="marte-en-el-cine.html">Marte en el cine</a></li>
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Marte en el cine</title>
+      <meta name="description" content="web de Marte arte">
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@400;800&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="css/estilos.css">
+  </head>
+  <body class="cine">
+    <header>
+      <div>
+        <h1><a href="index.html"><img src="img/logo-black-es.png" alt="logo web marte"></a></h1>
+        <nav>
+          <ul>
+            <li><a href="index.html#explora">Exploración de Marte</a></li>
+            <li><a href="ciencia-ficcion.html">Ciencia ficción</a></li>
+            <li class="active"><a href="marte-en-el-cine.html">Marte en el cine</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <h1>Marte en el cine</h1>
+      <div class="container">
+        <figure class="peli">
+          <div class="video-fluid">
+              <iframe class="video-fluid-item"  width="560" height="315" src="https://www.youtube.com/embed/pDNZul1RMcQ" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>        
+          </div>            
+          <figcaption><b>Terraformars.</b> Dir. Takashi Miike</figcaption>
+        </figure>
+        <figure class="peli">
+          <div class="video-fluid">
+              <iframe class="video-fluid-item"  width="560" height="315" src="https://www.youtube.com/embed/wVH4RWzKZvk" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                   
+          </div>            
+          <figcaption><b>Invaders from Mars. </b>Dir. Tobe Hooper</figcaption>
+        </figure>
+        <figure class="peli">
+          <div class="video-fluid">
+              <iframe class="video-fluid-item"  width="560" height="315" src="https://www.youtube.com/embed/IfpSo51jUUk" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>        
+          </div>            
+          <figcaption><b>Marteian Land.</b>Dir. Scott Wheeler</figcaption>
+        </figure>
+        <figure class="peli">
+          <div class="video-fluid">
+              <iframe class="video-fluid-item"  width="560" height="315" src="https://www.youtube.com/embed/ttA_Wxgo6js" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>        
+          </div>            
+          <figcaption><b>Last Days on Mars.</b>Dir. Ruairí Robinson</figcaption>
+        </figure>
+        <figure class="peli">
+          <div class="video-fluid">
+              <iframe class="video-fluid-item"  width="560" height="315" src="https://www.youtube.com/embed/ej3ioOneTy8" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>        
+          </div>            
+          <figcaption><b>The Martian.</b>Dir. Ridley Scott</figcaption>
+        </figure>
+        <figure class="peli">
+          <div class="video-fluid">
+              <iframe class="video-fluid-item"  width="560" height="315" src="https://www.youtube.com/embed/njeofv4dr9Q" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>        
+          </div>            
+          <figcaption><b>Monsters.</b>Dir. Gareth Edwards</figcaption>
+        </figure>
+      </div>
+    </main>
+    <footer class="pie">
+      <div class="container">
+        <img src="img/logo-white-es.png" alt="logo web marte">
+        <p><a href="mailto:hola@utopiamarciana.net">hola@utopiamarciana.net</a></p>
+        <form name="inscripcion" action="#" method="post">
+          <p>Siempre al día con nuestra <span class="news">newsletter</span></p>
+          <ul>
+            <li>
+              <input type="email" name="correo" id="correo" value="" placeholder="Escribe tu e-mail" required>
+            </li>
+            <li>
+              <input type="checkbox" name="politica" id="politica" value="Aceptacion de política datos" required >
+              <label for="politica">Acepto la  <a href="">política de protección de datos</a></label>
+            </li>
+            <li>
+              <input type="submit" value="Suscríbeme">
+            </li>
+          </ul>
+        </form>
+        <ul class="links">
+          <li><a href="">Aviso legal</a></li>
+          <li><a href="">Política de privacidad</a></li>
+          <li><a href="">Política de cookies</a></li>
         </ul>
-      </nav>
-    </div>
-  </header>
-  <main>
+        <div class="marca">
+          <p class="copyr">2021 &copy; Utopía marciana</p>
+          <p>Actividad realizada por Javier Badel Gasca, para la asignatura HTML y CSS. </p>  
+          <p>Segundo semestre del curso 2020-2021</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

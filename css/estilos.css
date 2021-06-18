@@ -448,6 +448,7 @@ body.cine main h1{
 }
 
 figure.peli {
+  background-color: var(--bg-light-color);
   padding-top: 0vh;
   margin-bottom: 2vh;
 }
